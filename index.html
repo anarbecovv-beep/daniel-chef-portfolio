@@ -1,1 +1,727 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Даниэл Анарбеков | Шеф-повар</title>
+
+<meta name="description" content="Даниэл Анарбеков — шеф-повар. Кулинарное портфолио, опыт, блюда и контакты. Бишкек, Кыргызстан.">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b0b0b;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* HEADER */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(10,10,10,0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #d4af37;
+}
+
+nav a {
+    margin-left: 25px;
+    color: #ccc;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #d4af37;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 20px 80px;
+
+    background:
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.85)),
+        url("https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1800&q=90")
+        center/cover;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.hero small {
+    color: #d4af37;
+    font-size: 18px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 8vw, 90px);
+    margin: 15px 0;
+    line-height: 1;
+}
+
+.hero h1 span {
+    color: #d4af37;
+}
+
+.hero p {
+    color: #ddd;
+    font-size: 20px;
+    max-width: 650px;
+    margin: 20px auto 35px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 28px;
+    margin: 5px;
+    border-radius: 5px;
+    background: #d4af37;
+    color: #111;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    background: #f0ce58;
+}
+
+.btn-outline {
+    background: transparent;
+    color: white;
+    border: 1px solid #d4af37;
+}
+
+/* SECTIONS */
+
+section {
+    padding: 100px 20px;
+}
+
+.container {
+    max-width: 1150px;
+    margin: auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title small {
+    color: #d4af37;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.section-title h2 {
+    font-size: 42px;
+    margin-top: 10px;
+}
+
+/* ABOUT */
+
+.about {
+    background: #111;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-text h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    color: #bbb;
+    margin-bottom: 15px;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.skill {
+    border: 1px solid #292929;
+    padding: 18px;
+    border-radius: 8px;
+    background: #151515;
+}
+
+.skill strong {
+    color: #d4af37;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* EXPERIENCE */
+
+.experience {
+    background: #0b0b0b;
+}
+
+.timeline {
+    max-width: 850px;
+    margin: auto;
+}
+
+.timeline-item {
+    border-left: 2px solid #d4af37;
+    padding: 0 0 35px 30px;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -8px;
+    top: 0;
+    width: 14px;
+    height: 14px;
+    background: #d4af37;
+    border-radius: 50%;
+}
+
+.timeline-item h3 {
+    font-size: 24px;
+}
+
+.timeline-item span {
+    color: #d4af37;
+    font-size: 14px;
+}
+
+.timeline-item p {
+    color: #aaa;
+    margin-top: 8px;
+}
+
+/* PORTFOLIO */
+
+.portfolio {
+    background: #111;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.card {
+    background: #181818;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card h3 {
+    margin-bottom: 5px;
+}
+
+.card p {
+    color: #999;
+    font-size: 14px;
+}
+
+/* SPECIALTIES */
+
+.specialties {
+    background: #0b0b0b;
+}
+
+.specialty-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.specialty {
+    background: #151515;
+    border: 1px solid #292929;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.specialty .icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.specialty h3 {
+    color: #d4af37;
+    margin-bottom: 10px;
+}
+
+.specialty p {
+    color: #aaa;
+}
+
+/* CONTACT */
+
+.contact {
+    background:
+        linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.9)),
+        url("https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1800&q=90")
+        center/cover;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    color: #bbb;
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.social {
+    border: 1px solid #444;
+    padding: 12px 20px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.social:hover {
+    border-color: #d4af37;
+    color: #d4af37;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background: #070707;
+    color: #777;
+    font-size: 14px;
+}
+
+footer span {
+    color: #d4af37;
+}
+
+/* MOBILE */
+
+@media(max-width: 800px) {
+
+    nav {
+        display: none;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .specialty-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+    }
+
+    .section-title h2 {
+        font-size: 34px;
+    }
+
+    .card img {
+        height: 230px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="nav">
+
+        <div class="logo">
+            DANIEL <span>CHEF</span>
+        </div>
+
+        <nav>
+            <a href="#about">Обо мне</a>
+            <a href="#experience">Опыт</a>
+            <a href="#portfolio">Блюда</a>
+            <a href="#contact">Контакты</a>
+        </nav>
+
+    </div>
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <small>Chef • Bishkek • Kyrgyzstan</small>
+
+        <h1>
+            Даниэл <span>Анарбеков</span>
+        </h1>
+
+        <p>
+            Шеф-повар, который превращает продукты
+            в эмоции, вкус и красивую подачу.
+        </p>
+
+        <a href="#portfolio" class="btn">
+            Смотреть портфолио
+        </a>
+
+        <a href="#contact" class="btn btn-outline">
+            Связаться со мной
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+    <div class="container">
+
+        <div class="section-title">
+            <small>About me</small>
+            <h2>Обо мне</h2>
+        </div>
+
+        <div class="about-grid">
+
+            <div class="about-text">
+
+                <h3>Я — Даниэл Анарбеков</h3>
+
+                <p>
+                    Повар и шеф-повар, развивающийся в современной
+                    ресторанной индустрии.
+                </p>
+
+                <p>
+                    Моя цель — создавать блюда, в которых сочетаются
+                    вкус, техника, качество продуктов и красивая подача.
+                </p>
+
+                <p>
+                    Постоянно развиваю профессиональные навыки,
+                    изучаю новые техники и работаю над собственным
+                    кулинарным стилем.
+                </p>
+
+            </div>
+
+
+            <div class="skills">
+
+                <div class="skill">
+                    <strong>01</strong>
+                    Европейская кухня
+                </div>
+
+                <div class="skill">
+                    <strong>02</strong>
+                    Горячие блюда
+                </div>
+
+                <div class="skill">
+                    <strong>03</strong>
+                    Супы
+                </div>
+
+                <div class="skill">
+                    <strong>04</strong>
+                    Паста
+                </div>
+
+                <div class="skill">
+                    <strong>05</strong>
+                    Мясные блюда
+                </div>
+
+                <div class="skill">
+                    <strong>06</strong>
+                    Подача блюд
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- EXPERIENCE -->
+
+<section class="experience" id="experience">
+
+    <div class="container">
+
+        <div class="section-title">
+            <small>Career</small>
+            <h2>Профессиональный путь</h2>
+        </div>
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+
+                <span>Профессиональное развитие</span>
+
+                <h3>Повар</h3>
+
+                <p>
+                    Работа на кухне, развитие техники,
+                    скорости и организации рабочего процесса.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <span>Следующий этап</span>
+
+                <h3>Старший повар / Chef</h3>
+
+                <p>
+                    Контроль качества блюд, организация работы кухни
+                    и ответственность за стабильный результат.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <span>Сегодня</span>
+
+                <h3>Шеф-повар</h3>
+
+                <p>
+                    Развитие собственной профессиональной системы,
+                    работа над меню и дальнейшее повышение квалификации.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PORTFOLIO -->
+
+<section class="portfolio" id="portfolio">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <small>My dishes</small>
+
+            <h2>Моё портфолио</h2>
+
+        </div>
+
+
+        <div class="gallery">
+
+
+            <div class="card">
+
+                <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=1000&q=85">
+
+                <div class="card-content">
+                    <h3>Паста</h3>
+                    <p>Паста с авторской подачей</p>
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?auto=format&fit=crop&w=1000&q=85">
+
+                <div class="card-content">
+                    <h3>Паста с мясом</h3>
+                    <p>Итальянская кухня</p>
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1000&q=85">
+
+                <div class="card-content">
+                    <h3>Суп</h3>
+                    <p>Горячие первые блюда</p>
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=1000&q=85">
+
+                <div class="card-content">
+                    <h3>Мясное блюдо</h3>
+                    <p>Современная подача</p>
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=1000&q=85">
+
+                <div class="card-content">
+                    <h3>Авторская кухня</h3>
+                    <p>Работа с продуктом</p>
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1000&q=85">
+
+                <div class="card-content">
+                    <h3>Гастрономия</h3>
+                    <p>Вкус и визуальная подача</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SPECIALTIES -->
+
+<section class="specialties">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <small>Skills</small>
+
+            <h2>Мои направления</h2>
+
+        </div>
+
+
+        <div class="specialty-grid">
+
+
+            <div class="specialty">
+
+                <div class="icon">🍝</div>
+
+                <h3>Паста</
